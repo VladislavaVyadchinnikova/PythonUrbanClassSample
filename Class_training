@@ -1,0 +1,104 @@
+class CoffeeShop:
+    """
+    Документация на класс.
+    Класс описывает кофейню. 
+    """
+    def __init__(self, name: str, place: str, area: float, chain:bool, filter:bool):
+        """ Инициализация экземпляра класса. """
+        self.name = name
+        self.place = place
+        self.area = area
+        self.chain = chain
+        self.filter = filter
+
+    def get_coffee_shop_info(self):
+        """ Узнаем общую информацию о кофейне """
+        ...
+
+    def get_filter(self):
+        """ Узнаем, делают ли в кофейне фильтр-кофе? """
+        ...
+
+    def add_filter(self):
+        """ Добавляем в меню кофейни фильтр-кофе """
+        ...
+        
+    def new_area(self, area_sum: float):
+        """ 
+        Увеличиваем площадь кофейни 
+        
+        :param : Объем добавляемой жидкости
+        """
+        ...
+        
+class Filter:
+    """
+    Документация на класс.
+    Класс описывает фильтр-кофе. 
+    """
+    def __init__(self, country: str, processing: str, q_grading: int, volume:int):
+        """ 
+        Инициализация экземпляра класса. 
+
+        :param country: Страна-производитель кофейного зерна
+        :param processing: Способ обработки зерна
+        :param q_grading: Оценка по шкале q
+        :param volume: Сколько мл приготовили?
+        """
+        self.country = country
+        self.processing = processing
+        self.q_grading = q_grading
+        self.volume = volume
+
+    def get_filter_info(self):
+        """ Узнаем общую информацию о приготовленном фильтре """
+        ...
+
+    def count_filter(self):
+        """ Сколько кофе осталось? """
+        ...
+  
+    def pour_filter(self, pour_ml: int):
+        """ 
+        Наливаем кофе
+        
+        :param pour_ml: Объем отливаемого кофе
+        """
+        ...
+        
+class CoffeeMachine:
+    """
+    Документация на класс.
+    Класс описывает кофемашину. 
+    """
+    def __init__(self, country: str, name: str, count_horn: int, count_horn_work:int):
+        """ 
+        Инициализация экземпляра класса. 
+
+        :param country: Страна-производитель кофемашины
+        :param name: Название кофемашины
+        :param count_horn: Количество рожков
+        :param count_horn_work: Количество работающих рожков
+        """
+        self.country = country
+        self.name = name
+        self.count_horn = count_horn
+        self.count_horn_work = count_horn_work
+
+    def get_coffee_machine_info(self):
+        """ Узнаем общую информацию о кофемашине """
+        ...
+
+    def breakdown(self, horn: int):
+        """ 
+        Актуальная информация о работающих рожках
+        
+        :param horn: Количество сломанных рожков
+        """
+        ...
+  
+    def count_breakdown_horn(self):
+        """ 
+        Сколько рожков сломано?
+        """
+        ...
